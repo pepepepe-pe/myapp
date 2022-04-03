@@ -24,10 +24,12 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <script type="module" src="./functions.js"></script>
+    <!-- 以下script追加でimportなしで使えるようになる-->
+    <script src="https://alcdn.msauth.net/browser/2.13.1/js/msal-browser.js" integrity="sha384-7hwr87O1w6buPsX92CwuRaz/wQzachgOEq+iLHv0ESavynv6rbYwKImSl7wUW3wV" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./auth.js"></script>
     <title>React App</title>
   </head>
-  <body onload="testalert()">
+  <body onload="signIn()">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

@@ -1,5 +1,5 @@
-import { PublicClientApplication } from "../node_modules/@azure/msal-browser/dist/index";
-
+//import { PublicClientApplication } from "./@azure/msal-browser/dist/index";
+console.log("動いてる");
 const msalConfig = {
     auth: {
       clientId: "2fdd06f3-7b34-49a3-a78b-0cf1dd87878e", // This is the ONLY mandatory field; everything else is optional.
@@ -12,8 +12,9 @@ const msalConfig = {
       storeAuthStateInCookie: true, // If you wish to store cache items in cookies as well as browser cache, set this to "true".
     },
   }
-const myMSALObj = new PublicClientApplication(msalConfig);
-
+const myMSALObj = new msal.PublicClientApplication(msalConfig);
+console.log("ここまで回ってる")
 function testalert(){
-    alert("test")
+    alert("うんち")
 }
+console.log("関数宣言もOK")
